@@ -272,7 +272,6 @@ class User(models.Model):
     first_name = models.CharField(max_length=255, blank=True)
     last_name = models.CharField(max_length=255, blank=True)
     userRole = models.ForeignKey('BaseRole', blank=True)
-    # legalEntityType = models.CharField(max_length=255) # This field may be accessed through legalEntityCode
     legalEntityCode = models.ForeignKey(LegalEntity, null=True)
     bpoKey = models.CharField(max_length=255, null=True)
     idDocumentNumber = models.CharField(max_length=255, null=True)
