@@ -368,8 +368,9 @@ class Catalog(models.Model):
 
 
 class CatalogValues(models.Model):
-    descriptorCode = models.CharField(max_length=255, blank=True)
-    catalogLabel = models.CharField(max_length=255, blank=True)
+    catalogValueCode = models.CharField(max_length=255, blank = True)
+    catalogValueLabel = models.CharField(max_length=255, blank=True)
+    descriptorCode = models.CharField(max_length=255, null=True)
     descriptorName = models.CharField(max_length=255, null=True)
     additionalValue = models.CharField(max_length=512, null=True)
     hasAdditionalValue = models.BooleanField(default=False, blank=True)
@@ -382,7 +383,7 @@ class CatalogValues(models.Model):
 
 class CatalogClassifier(models.Model):
     catalogClassifierCode = models.CharField(max_length=255, blank=True)
-    catalogClassifierDescriptorCod = models.CharField(max_length=255, blank=True)
+    catalogClassifierDescriptorCode = models.CharField(max_length=255, blank=True)
     catalogClassifierDescriptor = models.CharField(max_length=255, blank=True)
     metadataChain = models.IntegerField(default=1, blank=True)
     descriptorCode01 = models.CharField(max_length=255, blank=True)
@@ -435,16 +436,6 @@ class Parameter(models.Model):
     modificationDate = models.DateField(blank=True)
     creationDate = models.DateField(blank=True)
     createdBy = models.CharField(max_length=255, blank=True)
-
-
-# class Route(models.Model):
-#     routeCode = models.CharField(max_length=255, blank=True)
-#     catalogValueId = models.ForeignKey(CatalogValues)
-#     routeName = models.CharField(max_length=255, null=True)
-#     routeStatus = models.CharField(max_length=255, blank=True)
-#     modificationDate = models.DateField(blank=True)
-#     creationDate = models.DateField(blank=True)
-#     createdBy = models.CharField(max_length=255, blank=True)
 
 
 class DescriptorsAndMessages(models.Model):
