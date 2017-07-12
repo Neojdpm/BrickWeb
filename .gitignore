@@ -106,4 +106,5 @@ ENV/
 .idea/libraries/
 .idea/vcs.xml
 .idea/workspace.xml
+.idea/misc.xml
 brickvenv/
