@@ -100,3 +100,10 @@ ENV/
 # mypy
 .mypy_cache/
 
+.idea/dataSources.local.xml
+.idea/dataSources.xml
+.idea/dataSources/
+.idea/libraries/
+.idea/vcs.xml
+.idea/workspace.xml
+brickvenv/
